@@ -1,63 +1,195 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap");
+
+:root {
+  --Scissors-Gradient: linear-gradient(
+    to right,
+    hsl(39, 89%, 49%),
+    hsl(40, 84%, 53%)
+  );
+  --Paper-Gradient: linear-gradient(
+    to right,
+    hsl(230, 89%, 62%),
+    hsl(230, 89%, 65%)
+  );
+  --Rock-Gradient: linear-gradient(
+    to right,
+    hsl(349, 71%, 52%),
+    hsl(349, 70%, 56%)
+  );
+
+  --cyan: linear-gradient(to right, hsl(189, 59%, 53%), hsl(189, 58%, 57%));
+}
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-family: "Barlow Semi Condensed", sans-serif;
 }
 
-body {
-  width: 100vw;
-  height: 100vh;
-  background-image: linear-gradient(
-    to right,
-    hsl(214, 47%, 23%),
-    hsl(237, 49%, 15%)
-  );
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  text-transform: uppercase;
+
+
+body{
+    background-image: linear-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    font-family: 'Barlow Semi Condensed', sans-serif;
 }
 
-.score-container {
-  border: 4px solid hsl(217, 16%, 45%);
-  border-radius: 15px;
-  width: 700px;
-  height: 150px;
-  margin-top: 40px;
-  display: flex;
-  justify-content: space-between;
+
+header.header-container{
+    border: 5px solid  hsl(217, 16%, 45%);
+    border-radius: 15px;
+    padding: 1.5rem;
+    width: 30rem;
+    margin: 2rem auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: width 0.5s ease-in-out;
 }
 
-.score-container .title{
-    padding: 1rem;
-    font-weight: 600;
+.header{
     color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height: 0.85;
     font-size: 2rem;
-    
 }
 
-
-.score-container .score{
+.score-board{
+    padding: 1rem 2rem;
     background-color: white;
-    margin: 1rem;
-    width: 150px;
-    height: 114px;
     text-align: center;
-    border-radius: 8px;
+    border-radius: 5px;
 }
 
-.score-header{
-    color: hsl(229, 25%, 31%);
-    padding-top: 1rem;
-}
-
-#score-value{
+.title{
+    text-transform: uppercase;
     color: hsl(229, 64%, 46%);
-    font-size: 64px;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+}
+.value{
+    color: hsl(229, 25%, 31%);
+    font-size: 4rem;
     font-weight: 700;
-    line-height: 64px;
-    
+    line-height: 1;
+    transition: all 0.3s ease-in-out;
+}
+
+
+main{
+    position: relative;
+    margin-top: 10rem;
+}
+
+.game-body{
+    width: 30rem;
+    min-height: 26.25rem;
+    margin: auto;
+    position: relative;
+}
+
+
+.triangle{
+    position: absolute;
+    left: 60%;
+    top: 0;
+    transform: translateX(-50%);
+    width: 75%;
+    transition: all 0.5s ease-in-out;
+}
+.circle-container-paper{
+    position: absolute;
+    left: 0;
+    top: -6.5rem;
+}
+.circle-container-scissors{
+    position: absolute;
+    right: 0;
+    top: -6.5rem;
+}
+.circle-container-rock{
+    position: absolute;
+    left: 50%;
+    bottom: 6rem;
+    transform: translateX(-50%);
+}
+.circle-container-paper,
+.circle-container-scissors,
+.circle-container-rock{
+    transition: all 0.5s ease-in-out;
+}
+.big-circle{
+    width: 13rem;
+    height: 13rem;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 3px 3px rgb(0 0 0 / 25%);
+}
+.big-circle--dark-blue{
+    background-color: #2642bf;
+}
+.big-circle--dark-yellow{
+    background-color: #c76b18;
+}
+.big-circle--dark-red{
+    background-color: #9d1736;
+}
+.big-circle--light-blue,
+.big-circle--light-yellow,
+.big-circle--light-red{
+    transform: translateY(-6px) scale(1.03);
+}
+.big-circle--light-blue{
+    background-image: var(--Paper-Gradient);
+}
+.big-circle--light-yellow{
+    background-image: linear-gradient(120deg, hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+}
+.big-circle--light-red{
+    background-image: linear-gradient(120deg, hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+}
+.tiny-circle{
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+}
+.tiny-circle--dark-white{
+    background-color: #bfbfbf;
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.tiny-circle--light-white{
+    background-color: #ddd;
+    transform: translateY(4px) scale(1.02);
+}
+.content-icon{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.rules-btn{
+    color: #c9c9c9;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 0.75rem 0;
+    border: 1.5px solid #c9c9c9;
+    border-radius: 7px;
+    font-size: 1.2rem;
+    letter-spacing: 5px;
+    margin: 5rem auto;
+    width: 11rem;
+    display: block;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.2;
+    z-index: 999;
 }
