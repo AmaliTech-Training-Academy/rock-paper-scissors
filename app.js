@@ -117,3 +117,14 @@ function load() {
 function showComputerChoice() {
   hideComputerChoice.classList.add("active");
 }
+function reset() {
+  gameOptions.classList.remove("active");
+  resultContainer.classList.remove("active");
+  player.classList.remove(userChoice);
+  computer.classList.remove(computerChoice);
+  player.classList.remove("effect-left");
+  computer.classList.remove("effect-right");
+  resultContainer.classList.remove("load");
+  resultBox.classList.remove("active");
+  hideComputerChoice.classList.remove("active");
+}
