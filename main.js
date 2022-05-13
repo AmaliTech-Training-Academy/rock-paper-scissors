@@ -219,6 +219,28 @@ function gameOver(state, hUser1, hCom1) {
     document
       .querySelector(".choosed-item--com")
       .classList.add("choosed-item--com--s4");
+    
+    // document.querySelector('.game-body__big-circle').classList.add('game-body__big-circle--s4');
+    // document.querySelector('.game-body__tiny-circle').classList.add('game-body__tiny-circle--s4');
+    Array.from(document.querySelectorAll(".game-body__big-circle")).forEach(
+      (e) => {
+        e.classList.add("game-body__big-circle--s4");
+      }
+    );
+    Array.from(document.querySelectorAll(".game-body__tiny-circle")).forEach(
+      (e) => {
+        e.classList.add("game-body__tiny-circle--s4");
+      }
+    );
+  }, 1500);
+  playAgain.addEventListener("click", () => {
+    initGame(
+      (btn = playAgain),
+      (heading = heading),
+      (hUser = hUser1),
+      (hCom = hCom1),
+      (gmovCon = gameOverCont)
+    );
   
     
     
