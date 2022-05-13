@@ -190,6 +190,22 @@ function highlightEffect(slim) {
   c3.classList.add("circle");
   c3.classList.add("circle--3");
 }
+function gameOver(state, hUser1, hCom1) {
+  let heading = document.createElement("h2");
+  let playAgain = document.createElement("button");
+  let gameOverCont = document.createElement("div");
+  let playAgainSen = document.createTextNode("Play Again");
+  let winSen = document.createTextNode("You Win");
+  let loseSen = document.createTextNode("You Lose");
+  heading.classList.add("gameoversen");
+  playAgain.classList.add("btn");
+  gameOverCont.classList.add("game-over-container");
+  playAgain.append(playAgainSen);
+  if (state == "win") {
+    heading.append(winSen);
+  } else if (state == "lose") {
+    heading.append(loseSen);
+  }
     
     
     
