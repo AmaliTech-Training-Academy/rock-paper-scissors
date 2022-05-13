@@ -330,3 +330,57 @@ span {
 }
 
 /* -------------------Media Queries---------------------------*/
+
+@media only screen and (max-width: 341px) {
+  .score-panel {
+    grid-column: 2/12;
+  }
+  .score-title h1 {
+    font-size: 30px;
+  }
+  .scoreboard {
+    flex-basis: 80px;
+  }
+  .game-options {
+    grid-column: 1/13;
+    grid-row: 2;
+    background-size: 70%;
+    margin-top: 40px;
+  }
+  #paper,
+  #scissors,
+  #rock {
+    width: 110px;
+    height: 110px;
+    grid-column: 2;
+  }
+  #paper {
+    transform: translate(15px, 50px);
+  }
+  #scissors {
+    grid-column: 4;
+    transform: translate(-35px, 50px);
+  }
+  #rock {
+    transform: translateX(-10px);
+    grid-column: 3;
+    grid-row: 2;
+  }
+  #paper:active {
+    transform: scale(0.9) translate(15px, 50px) !important;
+  }
+  #scissors:active {
+    transform: scale(0.9) translate(-35px, 50px) !important;
+  }
+  #rock:active {
+    transform: scale(0.9) translate(-10px) !important;
+  }
+  span {
+    transform: translate(13px, 13px);
+  }
+  span img {
+    width: 70%;
+    transform: translate(7px, 7px);
+  }
+
+}
