@@ -19,3 +19,4 @@ let tempoV;
 let tempoArr = [];
 let stateFlag = false;
 let score = document.querySelector(".header__value");
+setScore((state = "init"), (tar = score));
