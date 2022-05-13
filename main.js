@@ -241,6 +241,61 @@ function gameOver(state, hUser1, hCom1) {
       (hCom = hCom1),
       (gmovCon = gameOverCont)
     );
+     });
+}
+function initGame(btn, heading, hUser, hCom, gmovCon) {
+  document.querySelector(".bg-triangle").classList.remove("bg-triangle--s2");
+  document
+    .querySelector(".choosed-item--com__bg-circle")
+    .classList.remove("choosed-item--com__bg-circle--s2");
+  document
+    .querySelector(".choosed-item--user")
+    .classList.remove("choosed-item--user--s4");
+  document
+    .querySelector(".choosed-item--com")
+    .classList.remove("choosed-item--com--s4");
+  Array.from(document.querySelectorAll(".game-body__big-circle")).forEach(
+    (e) => {
+      e.classList.remove("game-body__big-circle--s4");
+    }
+  );
+  Array.from(document.querySelectorAll(".game-body__tiny-circle")).forEach(
+    (e) => {
+      e.classList.remove("game-body__tiny-circle--s4");
+    }
+  );
+  gameItemsCont.forEach((e) => {
+    if (e.className.includes("choosed-item--user")) {
+      for (let i = 1; i <= 3; i++) {
+        document.querySelector(`.circle--${i}`).remove();
+      }
+      e.classList.remove("choosed-item--user");
+    } else if (e.className.includes("choosed-item--com")) {
+      e.classList.remove("choosed-item--com");
+    } else {
+      e.classList.remove("unchoosed-item");
+    }
+  });
+  btn.remove();
+  heading.remove();
+  gmovCon.remove();
+  hUser.remove();
+  hCom.remove();
+  stateFlag = false;
+  tempoArr = [];
+}
+function setScore(state, tar) {
+  if (state == "win") {
+    tar.textContent++;
+  } else if (state == "lose") {
+    if (tar.textContent > 0) {
+      tar.textContent--;
+    }
+  } else if (state == "init") {
+    tar.textContent = 0;
+  }
+}
+
   
     
     
