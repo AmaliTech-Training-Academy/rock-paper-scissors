@@ -206,6 +206,20 @@ function gameOver(state, hUser1, hCom1) {
   } else if (state == "lose") {
     heading.append(loseSen);
   }
+  gameOverCont.append(heading);
+  gameOverCont.append(playAgain);
+  setTimeout(() => {
+    document
+      .querySelector("main")
+      .insertBefore(gameOverCont, document.querySelector(".rules-btn"));
+    // document.querySelector('main').insertBefore(playAgain, document.querySelector('.rules-btn'));
+    document
+      .querySelector(".choosed-item--user")
+      .classList.add("choosed-item--user--s4");
+    document
+      .querySelector(".choosed-item--com")
+      .classList.add("choosed-item--com--s4");
+  
     
     
     
