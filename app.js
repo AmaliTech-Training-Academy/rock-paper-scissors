@@ -105,3 +105,13 @@ function result(userChoice, computerChoice) {
   setTimeout(load, 2000);
   setTimeout(showComputerChoice, 2000);
 }
+function load() {
+  resultContainer.classList.add("load");
+  resultBox.classList.add("active");
+  if (winner == userChoice) {
+    player.classList.add("effect-left");
+  } else {
+    computer.classList.add("effect-right");
+  }
+}
+
