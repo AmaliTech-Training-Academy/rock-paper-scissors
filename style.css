@@ -491,4 +491,32 @@ span {
     height: 110px;
     grid-column: 2;
   }
+  #paper {
+    transform: translate(10px, 35px);
+  }
+  #scissors {
+    grid-column: 4;
+    transform: translate(-10px, 35px);
+  }
+  #rock {
+    transform: translateX(0px);
+    grid-column: 3;
+    grid-row: 2;
+  }
+  #paper:active {
+    transform: scale(0.9) translate(10px, 35px) !important;
+  }
+  #scissors:active {
+    transform: scale(0.9) translate(-10px, 35px) !important;
+  }
+  #rock:active {
+    transform: scale(0.9) translate(0px) !important;
+  }
+  span {
+    transform: translate(13px, 13px);
+  }
+  span img {
+    width: 70%;
+    transform: translate(7px, 7px);
+  }
 }
