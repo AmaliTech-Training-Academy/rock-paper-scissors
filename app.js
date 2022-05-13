@@ -58,3 +58,36 @@ function updateScore(value) {
   storedScore = localStorage.getItem("score");
   scoreLabel.innerHTML = storedScore;
 }
+
+//function to check who is the winner
+
+function checkWinner() {
+  if (userChoice === "paper" && computerChoice === "rock") {
+    gameResult.innerText = "you win";
+    winner = userChoice;
+
+    setTimeout(() => {
+      updateScore(1);
+    }, 1000);
+  } else if (userChoice === "rock" && computerChoice === "paper") {
+    gameResult.innerText = "you lose";
+    winner = computerChoice;
+    setTimeout(() => {
+      updateScore(-1);
+    }, 2000);
+  } else if (pointMap.get(userChoice) > pointMap.get(computerChoice)) {
+    gameResult.innerText = "you win";
+    winner = userChoice;
+    setTimeout(() => {
+      updateScore(1);
+    }, 2000);
+  } else {
+    gameResult.innerText = "you lose";
+    winner = computerChoice;
+    setTimeout(() => {
+      updateScore(-1);
+    }, 2000);
+  }
+
+  console.log(score);
+}
