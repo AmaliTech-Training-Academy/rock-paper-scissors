@@ -58,7 +58,6 @@ function updateScore(value) {
   storedScore = localStorage.getItem("score");
   scoreLabel.innerHTML = storedScore;
 }
-
 //function to check who is the winner
 
 function checkWinner() {
@@ -91,6 +90,7 @@ function checkWinner() {
 
   console.log(score);
 }
+
 //update the view
 
 function result(userChoice, computerChoice) {
@@ -105,6 +105,7 @@ function result(userChoice, computerChoice) {
   setTimeout(load, 2000);
   setTimeout(showComputerChoice, 2000);
 }
+
 function load() {
   resultContainer.classList.add("load");
   resultBox.classList.add("active");
@@ -114,9 +115,11 @@ function load() {
     computer.classList.add("effect-right");
   }
 }
+
 function showComputerChoice() {
   hideComputerChoice.classList.add("active");
 }
+
 function reset() {
   gameOptions.classList.remove("active");
   resultContainer.classList.remove("active");
@@ -132,4 +135,4 @@ function reset() {
 //setting play again init();
 resetBtn.addEventListener("click", reset);
 
-init()
+init();
