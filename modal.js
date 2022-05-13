@@ -1,4 +1,4 @@
-/DOM elements
+//DOM elements
 const DOMStrings = {
   rules: ".rules",
   ruleBox: ".rules-overlay",
