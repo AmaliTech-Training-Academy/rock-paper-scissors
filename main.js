@@ -105,6 +105,21 @@ function swipe(flag, arr, slim, tmpArr) {
         setTimeout(() => {
           highlightEffect((slim = slim));
         }, 1250);
+        } else {
+        //LOSE
+        gameOver(
+          (state = "lose"),
+          (hUser1 = headingUser),
+          (hCom1 = headingCom)
+        );
+        setTimeout(() => {
+          setScore((state = "lose"), (tar = score));
+        }, 1500);
+        // Add Highlight Effect For Choosed Item
+        setTimeout(() => {
+          highlightEffect((slim = comItem));
+        }, 1250);
+      }
     
     
     
