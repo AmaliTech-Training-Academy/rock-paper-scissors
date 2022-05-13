@@ -45,7 +45,14 @@ function swipe(flag, arr, slim, tmpArr) {
   // Stage 2 If TRUE
   if (flag === true) {
   }
-    
+ // Stage 1 if FALSE. And Go To Stage 2
+  else {
+    // Add Stage 2 Class to Element
+    document.querySelector(".bg-triangle").classList.add("bg-triangle--s2");
+    document
+      .querySelector(".choosed-item--com__bg-circle")
+      .classList.add("choosed-item--com__bg-circle--s2");
+   
     
     
     
