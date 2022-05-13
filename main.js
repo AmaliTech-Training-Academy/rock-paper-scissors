@@ -67,7 +67,16 @@ function swipe(flag, arr, slim, tmpArr) {
     tmpArr.forEach((e) => {
       e.classList.add("unchoosed-item");
     });
-   
+   // Show Computer Choice
+    setTimeout(() => {
+      comItem.classList.remove("unchoosed-item");
+      comItem.classList.add("choosed-item--com");
+    }, 1000);
+    setTimeout(() => {
+      document
+        .querySelector(".choosed-item--com__bg-circle")
+        .classList.remove("choosed-item--com__bg-circle--s2");
+    }, 1000);
     
     
     
