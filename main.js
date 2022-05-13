@@ -88,7 +88,23 @@ function swipe(flag, arr, slim, tmpArr) {
     headingCom.append(headingComContent);
     headingCom.classList.add("you-picked");
     comItem.append(headingCom);
-    
+    // Check for The Winning Item
+    // Check for User Choice and Compare With Game Rules
+    /* Game RULES
+            Paper beats Rock beats Scissors beats Paper
+        */
+    if (slim.className.includes("paper")) {
+      // If User's Choice is paper, then check for possibilities
+      if (comItem.className.includes("rock")) {
+        // WIN
+        gameOver((state = "win"), (hUser1 = headingUser), (hCom1 = headingCom));
+        setTimeout(() => {
+          setScore((state = "win"), (tar = score));
+        }, 1500);
+        // Add Highlight Effect For Choosed Item
+        setTimeout(() => {
+          highlightEffect((slim = slim));
+        }, 1250);
     
     
     
