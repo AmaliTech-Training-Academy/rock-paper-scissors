@@ -19,6 +19,7 @@ let tempoV;
 let tempoArr = [];
 let stateFlag = false;
 let score = document.querySelector(".header__value");
+
 setScore((state = "init"), (tar = score));
 // Loop through Each Game Item
 gameItemsCont.forEach((e) => {
@@ -33,3 +34,16 @@ gameItemsCont.forEach((e) => {
       (slim = tempoV),
       (tmpArr = tempoArr)
     );
+     // Swipe Game State Flag
+    stateFlag = true;
+    // Play Again
+  });
+})
+    
+    
+    
+    
+    
+    
+    
+    
