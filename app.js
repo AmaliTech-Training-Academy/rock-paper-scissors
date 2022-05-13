@@ -19,3 +19,8 @@ let winner;
 let storedScore = 0;
 
 scoreLabel.innerText = storedScore;
+
+const pointMap = new Map();
+pointMap.set("paper", 0);
+pointMap.set("scissors", 1);
+pointMap.set("rock", 2);
