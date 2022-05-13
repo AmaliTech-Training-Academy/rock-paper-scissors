@@ -128,3 +128,8 @@ function reset() {
   resultBox.classList.remove("active");
   hideComputerChoice.classList.remove("active");
 }
+
+//setting play again init();
+resetBtn.addEventListener("click", reset);
+
+init()
