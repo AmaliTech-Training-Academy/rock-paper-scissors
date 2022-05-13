@@ -60,6 +60,13 @@ function swipe(flag, arr, slim, tmpArr) {
         tmpArr.push(e);
       }
     });
+    // Choose Random Item
+    let comItem = tmpArr[Math.floor(Math.random() * 2)];
+    // Add Classes
+    slim.classList.add("choosed-item--user");
+    tmpArr.forEach((e) => {
+      e.classList.add("unchoosed-item");
+    });
    
     
     
