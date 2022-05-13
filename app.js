@@ -44,3 +44,17 @@ function init() {
     });
   });
 }
+
+//choice generator for computer
+
+function choiceGen() {
+  return Math.floor(Math.random() * 2);
+}
+//Update Score
+
+function updateScore(value) {
+  score += value;
+  localStorage.setItem("score", JSON.stringify(score));
+  storedScore = localStorage.getItem("score");
+  scoreLabel.innerHTML = storedScore;
+}
