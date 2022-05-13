@@ -20,3 +20,9 @@ let tempoArr = [];
 let stateFlag = false;
 let score = document.querySelector(".header__value");
 setScore((state = "init"), (tar = score));
+// Loop through Each Game Item
+gameItemsCont.forEach((e) => {
+  // Listen For Click Event
+  e.addEventListener("click", function () {
+    // Store The Clicked Item in Variable
+    tempoV = e;
