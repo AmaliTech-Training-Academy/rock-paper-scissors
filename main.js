@@ -175,7 +175,21 @@ function swipe(flag, arr, slim, tmpArr) {
     }
   }
 }
-    
+ 
+function highlightEffect(slim) {
+  let c1 = document.createElement("div");
+  let c2 = document.createElement("div");
+  let c3 = document.createElement("div");
+  slim.append(c1);
+  slim.append(c2);
+  slim.append(c3);
+  c1.classList.add("circle");
+  c1.classList.add("circle--1");
+  c2.classList.add("circle");
+  c2.classList.add("circle--2");
+  c3.classList.add("circle");
+  c3.classList.add("circle--3");
+}
     
     
     
