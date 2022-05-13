@@ -114,4 +114,6 @@ function load() {
     computer.classList.add("effect-right");
   }
 }
-
+function showComputerChoice() {
+  hideComputerChoice.classList.add("active");
+}
