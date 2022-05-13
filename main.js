@@ -11,3 +11,10 @@ document.querySelector(".close-icon").addEventListener("click", () => {
     .classList.remove("rules-popup--active");
   document.querySelector(".overlay").classList.toggle("overlay--active");
 });
+
+let gameItemsCont = Array.from(
+  document.querySelectorAll("div[class^='game-body__circle-container'")
+);
+let tempoV;
+let tempoArr = [];
+let stateFlag = false;
