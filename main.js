@@ -26,3 +26,10 @@ gameItemsCont.forEach((e) => {
   e.addEventListener("click", function () {
     // Store The Clicked Item in Variable
     tempoV = e;
+    // Trigger Game Fuction
+    swipe(
+      (flag = stateFlag),
+      (arr = gameItemsCont),
+      (slim = tempoV),
+      (tmpArr = tempoArr)
+    );
