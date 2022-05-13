@@ -17,3 +17,5 @@ let userChoice, computerChoice;
 let score = 0;
 let winner;
 let storedScore = 0;
+
+scoreLabel.innerText = storedScore;
