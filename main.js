@@ -77,6 +77,17 @@ function swipe(flag, arr, slim, tmpArr) {
         .querySelector(".choosed-item--com__bg-circle")
         .classList.remove("choosed-item--com__bg-circle--s2");
     }, 1000);
+    // Create Heading
+    let headingUser = document.createElement("h3");
+    let headingUserContent = document.createTextNode("You Picked");
+    headingUser.classList.add("you-picked");
+    headingUser.append(headingUserContent);
+    slim.append(headingUser);
+    let headingCom = document.createElement("h3");
+    let headingComContent = document.createTextNode("The house Picked");
+    headingCom.append(headingComContent);
+    headingCom.classList.add("you-picked");
+    comItem.append(headingCom);
     
     
     
