@@ -91,3 +91,17 @@ function checkWinner() {
 
   console.log(score);
 }
+//update the view
+
+function result(userChoice, computerChoice) {
+  gameOptions.classList.add("active");
+  resultContainer.classList.add("active");
+  player.classList.add(userChoice);
+  computer.classList.add(computerChoice);
+
+  userImg.src = `images/icon-${userChoice}.svg`;
+  compImg.src = `images/icon-${computerChoice}.svg`;
+
+  setTimeout(load, 2000);
+  setTimeout(showComputerChoice, 2000);
+}
