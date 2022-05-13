@@ -52,6 +52,14 @@ function swipe(flag, arr, slim, tmpArr) {
     document
       .querySelector(".choosed-item--com__bg-circle")
       .classList.add("choosed-item--com__bg-circle--s2");
+    // Separation of the elements of an array
+    arr.filter((e) => {
+      // Make Sure of Regarding Clicked Item
+      if (slim !== arr[arr.indexOf(e)]) {
+        // Add NotClicked Items
+        tmpArr.push(e);
+      }
+    });
    
     
     
