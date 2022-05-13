@@ -24,3 +24,23 @@ const pointMap = new Map();
 pointMap.set("paper", 0);
 pointMap.set("scissors", 1);
 pointMap.set("rock", 2);
+
+function init() {
+  let choices = ["paper", "scissors", "rock"];
+  userChoice = undefined;
+  computerChoice = undefined;
+
+  buttons.forEach((curr) => {
+    curr.addEventListener("click", () => {
+      userChoice = curr.id;
+      choices.splice(choices.indexOf(userChoice), 1);
+      computerChoice = choices[choiceGen()];
+      console.log(userChoice);
+      console.log(computerChoice);
+      console.log(choices);
+      choices = ["paper", "scissors", "rock"];
+      checkWinner();
+      result(userChoice, computerChoice);
+    });
+  });
+}
