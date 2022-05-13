@@ -18,3 +18,4 @@ let gameItemsCont = Array.from(
 let tempoV;
 let tempoArr = [];
 let stateFlag = false;
+let score = document.querySelector(".header__value");
