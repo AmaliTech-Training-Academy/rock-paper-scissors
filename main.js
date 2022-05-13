@@ -146,7 +146,35 @@ function swipe(flag, arr, slim, tmpArr) {
           highlightEffect((slim = comItem));
         }, 1250);
       }
-    
+      } else if (slim.className.includes("scissors")) {
+      if (comItem.className.includes("rock")) {
+        //LOSE
+        gameOver(
+          (state = "lose"),
+          (hUser1 = headingUser),
+          (hCom1 = headingCom)
+        );
+        setTimeout(() => {
+          setScore((state = "lose"), (tar = score));
+        }, 1500);
+        // Add Highlight Effect For Choosed Item
+        setTimeout(() => {
+          highlightEffect((slim = comItem));
+        }, 1250);
+      } else {
+        // WIN
+        gameOver((state = "win"), (hUser1 = headingUser), (hCom1 = headingCom));
+        setTimeout(() => {
+          setScore((state = "win"), (tar = score));
+        }, 1500);
+        // Add Highlight Effect For Choosed Item
+        setTimeout(() => {
+          highlightEffect((slim = slim));
+        }, 1250);
+      }
+    }
+  }
+}
     
     
     
