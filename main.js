@@ -39,6 +39,12 @@ gameItemsCont.forEach((e) => {
     // Play Again
   });
 })
+
+// Stage 1 to 2 trigger Function
+function swipe(flag, arr, slim, tmpArr) {
+  // Stage 2 If TRUE
+  if (flag === true) {
+  }
     
     
     
