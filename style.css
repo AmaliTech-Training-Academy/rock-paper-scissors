@@ -122,7 +122,6 @@ body {
   cursor: pointer;
 }
 
-
 #game-1,
 #game-2 {
   position: absolute;
@@ -227,18 +226,15 @@ span {
 .reset {
   border: 1px solid #ffffff;
   color: #ffffff;
-  width: 80px;
   height: 50px;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
-   border-radius: 8px;
-   text-transform: uppercase;
-   position: absolute;
-   top: 690px;
-   left: 90px;
+  border-radius: 8px;
+  text-transform: uppercase;
 }
+
 .rules {
   border: 1px solid #ffffff;
   color: #ffffff;
@@ -467,11 +463,20 @@ span {
     font-size: 19px;
     margin-top: 30px;
   }
+
+  .reset {
+    grid-column: 5/9;
+    grid-row: 4;
+    font-size: 19px;
+    margin-top: 30px;
+  }
+
   .rules-title {
     font-size: 30px;
   }
   .attribution {
     grid-column: 1/13;
+    grid-row: 5;
     font-size: 12px;
     margin-top: 40px;
   }
@@ -604,11 +609,20 @@ span {
     font-size: 19px;
     margin-top: 30px;
   }
+
+  .reset {
+    grid-column: 5/9;
+    grid-row: 4;
+    font-size: 19px;
+    margin-top: 30px;
+  }
+
   .rules-title {
     font-size: 30px;
   }
   .attribution {
     grid-column: 1/13;
+    grid-row: 5;
     font-size: 12px;
     margin-top: 40px;
   }
@@ -740,6 +754,14 @@ span {
     font-size: 19px;
     margin-top: 30px;
   }
+
+  .reset {
+    grid-column: 5/9;
+    grid-row: 4;
+    font-size: 19px;
+    margin-top: 30px;
+  }
+
   .rules-title {
     font-size: 37px;
   }
@@ -748,6 +770,7 @@ span {
   }
   .attribution {
     grid-column: 1/13;
+    grid-row: 5;
     font-size: 12px;
     margin-top: 40px;
   }
@@ -879,6 +902,13 @@ span {
     font-size: 19px;
     margin-top: 30px;
   }
+  .reset {
+    grid-column: 5/9;
+    grid-row: 4;
+    font-size: 19px;
+    margin-top: 30px;
+  }
+
   .rules-title {
     font-size: 37px;
   }
@@ -888,6 +918,7 @@ span {
   .attribution {
     grid-column: 1/13;
     font-size: 12px;
+    grid-row: 5;
     margin-top: 40px;
   }
 }
@@ -1019,6 +1050,13 @@ span {
     font-size: 19px;
     margin-top: 60px;
   }
+  .reset {
+    grid-column: 5/9;
+    grid-row: 4;
+    font-size: 19px;
+    margin-top: 30px;
+  }
+
   .rules-title {
     font-size: 37px;
   }
@@ -1029,6 +1067,7 @@ span {
     grid-column: 1/13;
     font-size: 13px;
     margin-top: 40px;
+    grid-row: 5;
   }
 }
 
@@ -1153,11 +1192,19 @@ span {
     width: 380px;
     transform: translate(-35%, -35%);
   }
+
   .rules {
     grid-column: 5/9;
     grid-row: 3;
     font-size: 19px;
     margin-top: 60px;
+  }
+
+  .reset {
+    grid-column: 5/9;
+    grid-row: 4;
+    font-size: 19px;
+    margin-top: 30px;
   }
   .rules-title {
     font-size: 37px;
@@ -1169,6 +1216,7 @@ span {
     grid-column: 1/13;
     font-size: 13px;
     margin-top: 40px;
+    grid-row: 5;
   }
 }
 
@@ -1299,6 +1347,13 @@ span {
     font-size: 19px;
     margin-top: 60px;
   }
+  .reset {
+    grid-column: 5/9;
+    grid-row: 4;
+    font-size: 19px;
+    margin-top: 30px;
+  }
+
   .rules-title {
     font-size: 37px;
   }
@@ -1309,6 +1364,7 @@ span {
     grid-column: 1/13;
     font-size: 13px;
     margin-top: 40px;
+    grid-row: 5;
   }
 }
 
@@ -1435,9 +1491,15 @@ span {
   }
   .rules {
     grid-column: 6/8;
-    grid-row: 3;
+    grid-row: 4;
     font-size: 19px;
     margin-top: 60px;
+  }
+  .reset {
+    grid-column: 6/8;
+    grid-row: 3;
+    font-size: 19px;
+    margin-top: 30px;
   }
   .rules-title {
     font-size: 37px;
@@ -1449,6 +1511,7 @@ span {
     grid-column: 1/13;
     font-size: 13px;
     margin-top: 40px;
+    grid-row: inherit;
   }
   .cross-btn img {
     width: 25%;
@@ -1578,9 +1641,16 @@ span {
   }
   .rules {
     grid-column: 6/8;
-    grid-row: 3;
+    grid-row: 4;
     font-size: 19px;
     margin-top: 60px;
+  }
+
+  .reset {
+    grid-column: 6/8;
+    grid-row: 3;
+    font-size: 19px;
+    margin-top: 30px;
   }
   .rules-title {
     font-size: 37px;
@@ -1592,6 +1662,7 @@ span {
     grid-column: 1/13;
     font-size: 13px;
     margin-top: 40px;
+    grid-row: inherit;
   }
   .cross-btn img {
     width: 25%;
@@ -1728,6 +1799,13 @@ span {
   }
   .rules {
     grid-column: 10/12;
+    grid-row: 3;
+    font-size: 19px;
+    margin-top: 60px;
+  }
+
+  .reset {
+    grid-column: 7/9;
     grid-row: 3;
     font-size: 19px;
     margin-top: 60px;
@@ -1882,6 +1960,13 @@ span {
     font-size: 19px;
     margin-top: 60px;
   }
+  .reset {
+    grid-column: 7/9;
+    grid-row: 3;
+    font-size: 19px;
+    margin-top: 60px;
+  }
+
   .rules-title {
     font-size: 37px;
   }
@@ -2178,6 +2263,12 @@ span {
   }
   .rules {
     grid-column: 11/12;
+    grid-row: 3;
+    font-size: 19px;
+    margin-top: 60px;
+  }
+  .reset {
+    grid-column: 9/10;
     grid-row: 3;
     font-size: 19px;
     margin-top: 60px;
