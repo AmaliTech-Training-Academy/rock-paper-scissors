@@ -235,6 +235,12 @@ span {
   text-transform: uppercase;
 }
 
+.reset:hover{
+  color:#131336;
+  cursor: pointer;
+  background-color: #ffffff;
+}
+
 .rules {
   border: 1px solid #ffffff;
   color: #ffffff;

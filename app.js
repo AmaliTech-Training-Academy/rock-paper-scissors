@@ -18,7 +18,7 @@ let userChoice, computerChoice;
 let score = 0;
 let winner;
 let storedScore = localStorage.getItem("score");
-// scoreLabel.innerText = storedScore;
+scoreLabel.innerText = storedScore;
 
 const pointMap = new Map();
 pointMap.set("paper", 0);
@@ -56,7 +56,8 @@ function updateScore(value) {
   score += value;
   localStorage.setItem("score", JSON.stringify(score));
   console.log(storedScore);
-  displayScore();
+  let updatedScore = localStorage.getItem("score");
+  scoreLabel.innerText = updatedScore;
 }
 
 
@@ -65,12 +66,11 @@ function updateScore(value) {
 function resetScore(){
   score = 0;
   localStorage.setItem("score", JSON.stringify(score));
-  scoreLabel.innerHTML = storedScore;
+  let updatedScore = localStorage.getItem("score");
+  scoreLabel.innerText = updatedScore;
 }
 
-function displayScore(){
-  scoreLabel.innerText = storedScore;
-}
+
 
 
 resetScorebtn.addEventListener('click', resetScore)
@@ -102,19 +102,19 @@ function checkWinner() {
   if (userChoice === "paper" && computerChoice === "rock") {
     gameResult.innerText = "you win";
     winner = userChoice;
-      updateScore(1);
+      setTimeout(() => updateScore(1), 2000);
   } else if (userChoice === "rock" && computerChoice === "paper") {
     gameResult.innerText = "you lose";
     winner = computerChoice;
-      updateScore(-1);
+     setTimeout(()=> updateScore(-1), 2000);
   } else if (pointMap.get(userChoice) > pointMap.get(computerChoice)) {
     gameResult.innerText = "you win";
     winner = userChoice;
-      updateScore(1);
+    setTimeout(() => updateScore(1), 2000);
   } else {
     gameResult.innerText = "you lose";
     winner = computerChoice;
-      updateScore(-1);
+      setTimeout(() => updateScore(-1), 2000);
   }
 
   // console.log(score);
