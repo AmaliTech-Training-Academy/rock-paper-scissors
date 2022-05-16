@@ -68,6 +68,7 @@ function resetScore(){
   localStorage.setItem("score", JSON.stringify(score));
   let updatedScore = localStorage.getItem("score");
   scoreLabel.innerText = updatedScore;
+  reset()
 }
 
 
