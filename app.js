@@ -61,6 +61,28 @@ function updateScore(value) {
 //function to check who is the winner
 
 function checkWinner() {
+  if(userChoice === 'paper' ){
+    player.style.backgroundImage =
+      "linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%))";
+  } else if (userChoice === "rock") {
+    player.style.backgroundImage =
+      "linear-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%))";  
+  } else if (userChoice === "scissors") {
+    player.style.backgroundImage =
+      "linear-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%))";
+  }
+  
+  if(computerChoice === 'paper'){
+    computer.style.backgroundImage =
+      "linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%))";
+  } else if(computerChoice === 'rock'){
+    computer.style.backgroundImage =
+      "linear-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%))";
+  }else if (computerChoice ==='scissors'){
+    computer.style.backgroundImage =
+      "linear-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%))";
+  }
+
   if (userChoice === "paper" && computerChoice === "rock") {
     gameResult.innerText = "you win";
     winner = userChoice;
