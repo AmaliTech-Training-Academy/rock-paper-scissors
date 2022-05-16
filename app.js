@@ -12,13 +12,12 @@ const player = document.getElementById("player");
 const computer = document.getElementById("computer");
 const resultBox = document.querySelector(".result-title");
 const hideComputerChoice = document.querySelector(".invisible");
+const resetScorebtn = document.querySelector(".reset");
 let gameResult = document.getElementById("status");
 let userChoice, computerChoice;
 let score = 0;
 let winner;
 let storedScore = 0;
-
-scoreLabel.innerText = storedScore;
 
 const pointMap = new Map();
 pointMap.set("paper", 0);
@@ -56,29 +55,45 @@ function updateScore(value) {
   score += value;
   localStorage.setItem("score", JSON.stringify(score));
   storedScore = localStorage.getItem("score");
+  console.log(storedScore);
+  scoreLabel.innerHTML = storedScore;
+  
+}
+
+
+
+// reset score
+function resetScore(){
+  score = 0;
+  localStorage.setItem("score", JSON.stringify(score));
+  storedScore = localStorage.getItem("score");
+  console.log(storedScore);
   scoreLabel.innerHTML = storedScore;
 }
+
+
+resetScorebtn.addEventListener('click', resetScore)
 //function to check who is the winner
 
 function checkWinner() {
-  if(userChoice === 'paper' ){
+  if (userChoice === "paper") {
     player.style.backgroundImage =
       "linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%))";
   } else if (userChoice === "rock") {
     player.style.backgroundImage =
-      "linear-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%))";  
+      "linear-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%))";
   } else if (userChoice === "scissors") {
     player.style.backgroundImage =
       "linear-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%))";
   }
-  
-  if(computerChoice === 'paper'){
+
+  if (computerChoice === "paper") {
     computer.style.backgroundImage =
       "linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%))";
-  } else if(computerChoice === 'rock'){
+  } else if (computerChoice === "rock") {
     computer.style.backgroundImage =
       "linear-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%))";
-  }else if (computerChoice ==='scissors'){
+  } else if (computerChoice === "scissors") {
     computer.style.backgroundImage =
       "linear-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%))";
   }
