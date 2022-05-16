@@ -77,6 +77,10 @@ body {
   padding: 10px;
 }
 
+
+
+
+
 .game-options.active {
   background: inherit;
   opacity: 0;
@@ -2295,7 +2299,7 @@ span {
   }
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 475px) {
   .rules-overlay {
     background-color: #ffffff;
   }
